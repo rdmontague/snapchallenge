@@ -6,9 +6,13 @@ const convertToGrams = (weight, units) => {
         case 'lbs':
             grams = weight * 454
             break
-        case 'oz:' +
+        case 'oz:':
             grams = weight * 454 * 16
             break
     }
     return grams
 }
+
+const coffeeWeight = convertToGrams(1, 'lbs')
+console.log(coffeeWeight)
+
