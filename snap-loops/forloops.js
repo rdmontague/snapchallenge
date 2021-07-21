@@ -2,7 +2,6 @@ const persons = [{"id":1,"name":"Leanne Graham","username":"Bret","email":"Since
 
 function removeCompanyFromPerson(arrayOfPersons) {
     let accumulator = []
-    console.log(arrayOfPersons)
     for(let i = 0; i < arrayOfPersons.length; i++) {
         accumulator.push(arrayOfPersons[i])
         accumulator[i].company = undefined
@@ -11,5 +10,27 @@ function removeCompanyFromPerson(arrayOfPersons) {
 
 }
 
-const revisedArray = removeCompanyFromPerson(persons)
-console.log("revised array", revisedArray)
+
+// const revisedArray = removeCompanyFromPerson(persons)
+// console.log("revised array", revisedArray)
+const functionExpresion = function (person){
+    delete person.company
+}
+
+console.log(functionExpresion)
+//persons.forEach(functionExpresion)
+
+
+// function revisedRemoveCompanyFromPerson(arrayOfPersons) {
+//     let accumulator = []
+//     for(let i = 0; i < arrayOfPersons.length; i++) {
+//         accumulator.push({...arrayOfPersons[i]})
+//         accumulator[i].company = undefined
+//     }
+//     return accumulator
+//
+// }
+//
+// const revisedRevisedArray = revisedRemoveCompanyFromPerson(persons)
+// console.log("revised array", revisedRevisedArray)
+
